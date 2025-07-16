@@ -1,0 +1,311 @@
+@import "tailwindcss";
+
+html{
+    scroll-behavior: smooth;
+    background-color: rgb(3 7 18);
+}
+
+@font-face {
+    font-family: 'Melodrama';
+    src: url('./assets/Panchang_Complete/Fonts/WEB/fonts/Panchang-bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+/* Custom Tailwind-like utility class */
+.melodrama {
+    font-family: 'Melodrama', serif;
+  }
+
+
+
+  @font-face {
+    font-family: 'clash2';
+    src: url('./assets/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Medium.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  
+  @font-face {
+    font-family: 'clash';
+    src: url('./assets/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Light.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+  }
+  .clash {
+    font-family: 'Clash2', serif;
+  }
+/* Custom Tailwind-like utility class */
+.clash {
+    font-family: 'Clash', serif;
+  }
+.glitch-button, .glitch-button::after {
+  padding: 10px 50px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background-color: #3eacb4;
+  position: relative;
+}
+
+.glitch-button::after {
+  --move1: inset(50% 50% 50% 50%);
+  --move2: inset(31% 0 40% 0);
+  --move3: inset(39% 0 15% 0);
+  --move4: inset(45% 0 40% 0);
+  --move5: inset(45% 0 6% 0);
+  --move6: inset(14% 0 61% 0);
+  clip-path: var(--move1);
+  content: 'PROTONIX AI';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.glitch-button:hover::after {
+  animation: glitch_4011 1s;
+  text-shadow: -3px -3px 0px #1df2f0, 3px 3px 0px #E94BE8;
+  background-color: transparent;
+  border: 3px solid rgb(0, 255, 213);
+  animation-timing-function: steps(2, end);
+}
+
+.glitch-button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(0, 255, 213);
+  box-shadow: 0px 10px 10px -10px rgb(0, 255, 213);
+  text-shadow: -1px -1px 0px #1df2f0, 1px 1px 0px #E94BE8;
+}
+
+@keyframes glitch_4011 {
+  0% {
+    clip-path: var(--move1);
+    transform: translate(0px, -10px);
+  }
+  10% {
+    clip-path: var(--move2);
+    transform: translate(-10px, 10px);
+  }
+  20% {
+    clip-path: var(--move3);
+    transform: translate(10px, 0px);
+  }
+  30% {
+    clip-path: var(--move4);
+    transform: translate(-10px, 10px);
+  }
+  40% {
+    clip-path: var(--move5);
+    transform: translate(10px, -10px);
+  }
+  50% {
+    clip-path: var(--move6);
+    transform: translate(-10px, 10px);
+  }
+  60% {
+    clip-path: var(--move1);
+    transform: translate(10px, -10px);
+  }
+  70% {
+    clip-path: var(--move3);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--move2);
+    transform: translate(10px, -10px);
+  }
+  90% {
+    clip-path: var(--move4);
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    clip-path: var(--move1);
+    transform: translate(0);
+  }
+}
+
+.hollow-text {
+  color: transparent;
+  -webkit-text-stroke: 3px white; /* Change color/size as needed */
+}
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.button {
+  /* in scss with just one variable i can change opacity with rgba(variable, opacity) but in css it's not possible so i have used three seperate variables */
+  /* with hue-rotate color can be changed */
+  --main-color: rgb(113, 67, 199);           /* Solid purple-900 */
+--main-bg-color: rgba(76, 29, 149, 0.36); /* Semi-transparent background */
+--pattern-color: rgba(76, 29, 149, 0.073); /* Faint pattern/overlay */
+
+
+  /* change this rotation value */
+  filter: hue-rotate(0deg);
+
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background: radial-gradient(
+      circle,
+      var(--main-bg-color) 0%,
+      rgba(0, 0, 0, 0) 95%
+    ),
+    linear-gradient(var(--pattern-color) 1px, transparent 1px),
+    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size:
+    cover,
+    15px 15px,
+    15px 15px;
+  background-position:
+    center center,
+    center center,
+    center center;
+  border-image: radial-gradient(
+      circle,
+      var(--main-color) 0%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    1;
+  border-width: 1px 0 1px 0;
+  color: var(--main-color);
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 2rem;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-size:
+    cover,
+    10px 10px,
+    10px 10px;
+}
+.button:active {
+  filter: hue-rotate(250deg);
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #8948ff #0d0d0d;
+}
+
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md border border-white/60  rounded-xl;
+  background-color: rgba(137, 57, 212, 0.187);
+}
+
+/* Neon text effect */
+.neon-text {
+  text-shadow: 0 0 5px rgba(137, 72, 255, 0.7),
+               0 0 10px rgba(137, 72, 255, 0.5),
+               0 0 15px rgba(137, 72, 255, 0.3);
+}
+
+.neon-border {
+  border: 1px solid #8948ff;
+  box-shadow: 0 0 5px #8948ff,
+              0 0 10px rgba(137, 72, 255, 0.5),
+              inset 0 0 5px rgba(137, 72, 255, 0.3);
+}
+
+/* Animation classes */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+
+
+/* Technology showcase animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3  font-medium transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-primary {
+    background-color: #8948ff;
+    color: #ffffff;
+  }
+
+  .btn-primary:hover {
+    background-color: rgba(137, 72, 255, 0.8);
+  }
+
+  .btn-outline {
+    border: 1px solid #8948ff;
+    color: #8948ff;
+  }
+
+  .btn-outline:hover {
+    background-color: rgba(137, 72, 255, 0.1);
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl  font-bold mb-4 text-white;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-300 max-w-3xl mx-auto mb-12;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+}
